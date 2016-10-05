@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from django.http.response import HttpResponse
 from rest_framework.decorators import api_view, renderer_classes
-from rest_framework import response, schemas, serializers, mixins
+from rest_framework import response, schemas, mixins, routers, serializers, viewsets
 from rest_framework.generics import GenericAPIView
 from rest_framework_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
 from dukwatch.models import Post_sample

@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from dukwatch.views import swagger_view,sample_page,sample_api
+import dukwatch.urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rest-api/', include('rest_framework.urls')),
     url(r'^rest-swagger/', swagger_view),
-    url(r'^sample_page/', sample_page),
-    url(r'^api/sample/', sample_api.as_view())
+    url(r'^api/', include(dukwatch.urls)),
 ]

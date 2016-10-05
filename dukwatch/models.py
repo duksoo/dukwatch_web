@@ -16,5 +16,6 @@ class VideoBoard(models.Model) :
     UserName = models.CharField(max_length=20)
     popular = models.CharField(max_length=10)
     New = models.CharField(max_length=10)
+
 class Free_Board(models.Model) :
-    title = models.CharField()
+    title = models.CharField(max_length=100)
