@@ -14,8 +14,6 @@ class Video_Board(models.Model) :
     Day = models.DateTimeField(auto_created=True, auto_now=True)
     URL = models.CharField(max_length=100)
     UserName = models.CharField(max_length=20)
-    popular = models.CharField(max_length=10)
-    New = models.CharField(max_length=10)
 
 class User_data(models.Model) :
     characterName = models.CharField(max_length=100)  # 캐릭터 명이 들어감
@@ -23,6 +21,7 @@ class User_data(models.Model) :
     Point = models.CharField(max_length=5)
     PlayTime = models.CharField(max_length=5)
     Level = models.IntegerField(max_length=5)
+    Nara = models.CharField(max_length=10)
 
 class Character_data(models.Model) :
     User = models.ForeignKey(User_data)
@@ -52,7 +51,8 @@ class Character_data(models.Model) :
     heal = models.IntegerField(max_length=20)
     Kill = models.IntegerField(max_length=15)
     SumKill = models.IntegerField(max_length=15)
-
+    Finishattack = models.IntegerField(max_lenght=10)
+    BestFinishattack = models.IntegerField(max_lenght=10)
 
 
 
